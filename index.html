@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopEasy - Online Shopping Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ===== Top navigation bar ===== -->
+  <header class="navbar">
+    <div class="logo">Shop<span>Easy</span></div>
+
+    <input type="text" id="searchBox" class="search-box" placeholder="Search products...">
+
+    <!-- Category filter buttons -->
+    <div class="categories" id="categoryButtons">
+      <button class="cat-btn active" data-category="all">All</button>
+      <button class="cat-btn" data-category="electronics">Electronics</button>
+      <button class="cat-btn" data-category="fashion">Fashion</button>
+      <button class="cat-btn" data-category="home">Home</button>
+      <button class="cat-btn" data-category="books">Books</button>
+    </div>
+
+    
+    <button id="cartToggle" class="cart-icon-btn">
+      🛒 Cart <span id="cartCount" class="cart-badge">0</span>
+    </button>
+  </header>
+
+  <main class="container">
+    <!-- Product cards are inserted here dynamically by JavaScript -->
+    <section id="productGrid" class="product-grid"></section>
+
+    <!-- Shown if a search/filter produces no results -->
+    <p id="noResults" class="no-results hidden">No products found.</p>
+  </main>
+
+  <!-- ===== Slide-in Cart Panel ===== -->
+  <aside id="cartPanel" class="cart-panel">
+    <div class="cart-header">
+      <h2>Your Cart</h2>
+      <button id="closeCart" class="close-btn">&times;</button>
+    </div>
+
+    <div id="cartItems" class="cart-items">
+      <!-- Cart line items inserted here by JavaScript -->
+    </div>
+
+    <p id="cartEmptyMsg" class="cart-empty hidden">Your cart is empty.</p>
+
+    <div class="cart-footer">
+      <div class="cart-total-row">
+        <span>Total:</span>
+        <span id="cartTotal">₹0</span>
+      </div>
+      <button id="checkoutBtn" class="btn btn-primary full-width">Checkout</button>
+    </div>
+  </aside>
+
+  <!-- Dark overlay shown behind the cart panel when it's open -->
+  <div id="overlay" class="overlay hidden"></div>
+
+  <footer class="footer">
+    <p>ShopEasy &mdash; Demo Shopping Website built with HTML, CSS &amp; JavaScript</p>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
