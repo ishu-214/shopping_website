@@ -7,7 +7,7 @@
 
 body {
   font-family: 'Segoe UI', Arial, sans-serif;
-  background-color:lightgreen;
+  background-color:burlywood;
   color: #1f2937;
 }
 
@@ -25,7 +25,7 @@ body {
   position: sticky;   /* stays visible at the top while scrolling */
   top: 0;
   z-index: 10;
-  background-color:mediumturquoise;
+  background-color:#4F7857;
 }
 
 .logo {
